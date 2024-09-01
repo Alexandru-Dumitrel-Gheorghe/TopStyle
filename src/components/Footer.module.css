@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Adaugă această regulă pentru a permite iconițelor să se împacheteze pe mai multe rânduri dacă nu există suficient spațiu */
 }
 
 .socialLink {
@@ -37,11 +38,6 @@
 }
 
 @media (max-width: 768px) {
-  .socialMedia {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .socialLink {
     font-size: 1.2rem;
   }
