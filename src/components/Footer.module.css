@@ -1,0 +1,48 @@
+/* src/components/Footer.module.css */
+
+.footer {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1c1c1c 25%, #2c2c2c 75%);
+  color: #f0f0f0;
+  text-align: center;
+  border-top: 2px solid #ff6f61;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialLink {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.socialLink:hover {
+  color: #ff6f61;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .socialMedia {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .socialLink {
+    font-size: 1.2rem;
+  }
+}

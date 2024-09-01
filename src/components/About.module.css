@@ -1,0 +1,53 @@
+/* src/components/About.module.css */
+
+.aboutSection {
+  padding: 80px 20px;
+  background-color: #1c1c1c; /* Fundal mai închis */
+  color: #f0f0f0; /* Text deschis pentru contrast */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ff6f61; /* Culoarea de accent */
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #cccccc; /* Gri deschis pentru text */
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.aboutImage {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Umbră mai închisă */
+  transition: transform 0.3s ease-in-out;
+}
+
+.aboutImage:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .aboutImage {
+    max-width: 100%;
+  }
+}
