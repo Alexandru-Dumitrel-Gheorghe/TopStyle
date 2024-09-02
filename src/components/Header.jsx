@@ -1,34 +1,25 @@
-import React, { useState, useEffect } from "react";
-import AOS from "aos"; // Importă AOS
-import "aos/dist/aos.css";
+import React, { useState } from "react";
 import styles from "./Header.module.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    setTimeout(() => {
-      AOS.refresh(); // Forțează refresh-ul AOS după schimbarea stării meniului
-    }, 0);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <h1 className={styles.logo} data-aos="fade-down">
-          TopStyle
-        </h1>
+        <h1 className={styles.logo}>TopStyle</h1>
         <button
           className={`${styles.menuToggle} ${isMenuOpen ? styles.open : ""}`}
           onClick={toggleMenu}
+          aria-label="Toggle Menu"
         >
           <span></span>
           <span></span>
@@ -40,22 +31,34 @@ const Header = () => {
           }`}
         >
           <li>
-            <a href="#welcome">Startseite</a>
+            <a href="#welcome" onClick={closeMenu}>
+              Startseite
+            </a>
           </li>
           <li>
-            <a href="#prices">Preise</a>
+            <a href="#prices" onClick={closeMenu}>
+              Preise
+            </a>
           </li>
           <li>
-            <a href="#gallery">Galerie</a>
+            <a href="#gallery" onClick={closeMenu}>
+              Galerie
+            </a>
           </li>
           <li>
-            <a href="#testimonials">Kundenstimmen</a>
+            <a href="#testimonials" onClick={closeMenu}>
+              Kundenstimmen
+            </a>
           </li>
           <li>
-            <a href="#about">Über Uns</a>
+            <a href="#about" onClick={closeMenu}>
+              Über Uns
+            </a>
           </li>
           <li>
-            <a href="#contact">Kontakt</a>
+            <a href="#contact" onClick={closeMenu}>
+              Kontakt
+            </a>
           </li>
         </ul>
       </nav>

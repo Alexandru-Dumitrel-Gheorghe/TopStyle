@@ -9,19 +9,16 @@ const Welcome = () => {
       className={`${styles.welcomeSection} d-flex justify-content-center align-items-center`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className={`${styles.overlay} w-100 h-100 position-absolute`}></div>
+      <div className={`${styles.overlay}`}></div>
       <div
-        className={`${styles.content} container text-center text-white position-relative`}
+        className={`${styles.content} container text-center text-white`}
         data-aos="fade-up"
       >
-        <h2
-          className={`${styles.title} display-4 font-weight-bold mb-4`}
-          data-aos="fade-up"
-        >
+        <h2 className={`${styles.title} mb-4`} data-aos="fade-up">
           Willkommen bei TopStyle
         </h2>
         <p
-          className={`${styles.subtitle} lead mb-4`}
+          className={`${styles.subtitle} mb-4`}
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -29,7 +26,7 @@ const Welcome = () => {
         </p>
         <a
           href="#contact"
-          className={`${styles.button} btn btn-primary btn-lg`}
+          className={`${styles.button}`}
           data-aos="fade-up"
           data-aos-delay="400"
         >

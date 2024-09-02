@@ -1,5 +1,3 @@
-/* src/components/Welcome.module.css */
-
 .welcomeSection {
   height: 100vh;
   background-size: cover;
@@ -16,10 +14,17 @@
     0,
     0.6
   ); /* Un overlay semi-transparent pentru a înmuia fundalul */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .content {
   z-index: 2; /* Asigură că textul este deasupra overlay-ului */
+  position: relative;
 }
 
 .title {
@@ -37,20 +42,30 @@
 }
 
 .button {
-  background-color: #ff6f61 !important; /* Culoare de accent */
-  border: none;
+  display: inline-block;
+  margin-top: 20px;
   padding: 15px 30px;
+  background-color: #ff6f61;
+  color: #1c1c1c;
+  text-decoration: none;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-  background-color: #f0f0f0 !important; /* Culoare de accent */
-  color: #1c1c1c !important; /* Culoare de text */
+  background-color: #f0f0f0;
+  color: #1c1c1c;
   transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
+  .welcomeSection {
+    padding: 20px;
+    text-align: center;
+  }
+
   .title {
     font-size: 2.5rem;
   }
@@ -62,5 +77,20 @@
   .button {
     font-size: 1rem;
     padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }

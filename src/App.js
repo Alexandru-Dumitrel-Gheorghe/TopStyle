@@ -10,6 +10,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import OpeningHours from "./components/OpeningHours";
 
 import "./App.css";
 
@@ -30,7 +31,7 @@ function App() {
       <Prices />
       <Gallery />
       <Testimonials />
-
+      <OpeningHours />
       <Contact />
       <Footer />
     </div>
